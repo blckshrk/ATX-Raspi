@@ -24,7 +24,7 @@ while [ 1 ]; do
   if [ $shutdownSignal = 0 ]; then
     /bin/sleep 0.5
   else
-    sudo poweroff
+    sudo mpc stop && poweroff
   fi
 done' > /etc/shutdowncheck.sh
 sudo chmod 755 /etc/shutdowncheck.sh
